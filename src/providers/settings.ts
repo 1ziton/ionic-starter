@@ -7,12 +7,13 @@ import {Storage} from '@ionic/storage';
  */
 @Injectable()
 export class Settings {
-  private SETTINGS_KEY: string = '_settings';
 
   settings: any;
 
   _defaults: any;
   _readyPromise: Promise<any>;
+
+  private SETTINGS_KEY: string = '_settings';
 
   constructor(public storage: Storage, defaults: any) {
     this._defaults = defaults;
@@ -45,7 +46,9 @@ export class Settings {
 
   merge(settings: any) {
     for (let k in settings) {
-      this.settings[k] = settings[k];
+      if (settings.hasOwnProperty(k)) {
+        this.settings[k] = settings[k];
+      }
     }
     return this.save();
   }

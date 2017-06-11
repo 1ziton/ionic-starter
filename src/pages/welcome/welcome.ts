@@ -10,6 +10,7 @@ import { SignupPage } from '../signup/signup';
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
 */
+
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
