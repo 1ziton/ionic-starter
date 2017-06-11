@@ -1,7 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {NavController, Platform} from 'ionic-angular';
 
-import { GoogleMaps, GoogleMap, GoogleMapsEvent, LatLng, CameraPosition } from '@ionic-native/google-maps';
+import {GoogleMaps, GoogleMap, GoogleMapsEvent, LatLng, CameraPosition} from '@ionic-native/google-maps';
 
 declare var google: any;
 
@@ -10,15 +10,17 @@ declare var google: any;
   templateUrl: 'map.html'
 })
 export class MapPage {
-  
+
   @ViewChild('map') map;
 
-  constructor(private googleMaps: GoogleMaps, public navCtrl: NavController, public platform: Platform) { }
+  constructor(private googleMaps: GoogleMaps, public navCtrl: NavController, public platform: Platform) {
+  }
 
 
   ngAfterViewInit() {
     this.loadMap();
   }
+
   loadMap() {
     // make sure to create following structure in your view.html file
     // and add a height (for example 100%) to it, else the map won't be visible
@@ -33,7 +35,11 @@ export class MapPage {
 
     // listen to MAP_READY event
     // You must wait for this event to fire before adding something to the map or modifying it in anyway
-    map.one(GoogleMapsEvent.MAP_READY).then(() => console.log('Map is ready!'));
+    map.one(GoogleMapsEvent.MAP_READY).then(() => {
+      /* tslint:disable */
+      console.log('Map is ready!')
+      /* tslink:enable */
+    });
 
     // create LatLng object
     let ionic: LatLng = new LatLng(43.0741904, -89.3809802);

@@ -30,7 +30,9 @@ export class TutorialPage {
       "TUTORIAL_SLIDE3_DESCRIPTION",
     ]).subscribe(
       (values) => {
+        /* tslint:disable */
         console.log('Loaded values', values);
+        /* tslint:enable */
         this.slides = [
           {
             title: values.TUTORIAL_SLIDE1_TITLE,
