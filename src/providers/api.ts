@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Http, RequestOptions, URLSearchParams } from '@angular/http';
+import {Injectable} from '@angular/core';
+import {Http, RequestOptions, URLSearchParams} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /**
@@ -21,7 +21,9 @@ export class Api {
     if (params) {
       let p = new URLSearchParams();
       for (let k in params) {
-        p.set(k, params[k]);
+        if (params.hasOwnProperty(k)) {
+          p.set(k, params[k]);
+        }
       }
       // Set the search field if we have params and don't already have
       // a search field set in options.

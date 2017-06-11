@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
 
-import { Item } from '../../models/item';
+import {Item} from '../../models/item';
 
 @Injectable()
 export class Items {
@@ -65,12 +65,15 @@ export class Items {
 
     return this.items.filter((item) => {
       for (let key in params) {
-        let field = item[key];
-        if (typeof field == 'string' && field.toLowerCase().indexOf(params[key].toLowerCase()) >= 0) {
-          return item;
-        } else if (field == params[key]) {
-          return item;
+        if (params.hasOwnProperty(key)) {
+          let field = item[key];
+          if (typeof field === 'string' && field.toLowerCase().indexOf(params[key].toLowerCase()) >= 0) {
+            return item;
+          } else if (field === params[key]) {
+            return item;
+          }
         }
+
       }
       return null;
     });
