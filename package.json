@@ -1,8 +1,8 @@
 {
-  "name": "mySuperApp",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "JZT",
+  "version": "2.0.0",
+  "author": "admin@1ziton.com",
+  "homepage": "http://1ziton.com/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",

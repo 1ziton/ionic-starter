@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { LoginPage } from '../login/login';
-import { SignupPage } from '../signup/signup';
+import { LoginPage } from '../security/login/login';
+import { SignupPage } from '../security/signup/signup';
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,

@@ -21,6 +21,14 @@
     "no-bitwise": true,
     "no-conditional-assignment": true,
     "no-console": [true, "debug", "info","warn","error","log", "time", "timeEnd", "trace"],
+    "ban": [
+      true,
+      "alert",
+      [
+        "alert",
+        "eval"
+      ]
+    ],
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,

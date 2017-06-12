@@ -1,10 +1,6 @@
-import { Component } from '@angular/core';
-import { MenuController, NavController } from 'ionic-angular';
-
-import { WelcomePage } from '../welcome/welcome';
-
-import { TranslateService } from '@ngx-translate/core';
-
+import {Component} from "@angular/core";
+import {MenuController, NavController} from "ionic-angular";
+import {WelcomePage} from "../welcome/welcome";
 
 
 export interface ISlide {
@@ -21,36 +17,24 @@ export class TutorialPage {
   slides: ISlide[];
   showSkip = true;
 
-  constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService) {
-    translate.get(["TUTORIAL_SLIDE1_TITLE",
-      "TUTORIAL_SLIDE1_DESCRIPTION",
-      "TUTORIAL_SLIDE2_TITLE",
-      "TUTORIAL_SLIDE2_DESCRIPTION",
-      "TUTORIAL_SLIDE3_TITLE",
-      "TUTORIAL_SLIDE3_DESCRIPTION",
-    ]).subscribe(
-      (values) => {
-        /* tslint:disable */
-        console.log('Loaded values', values);
-        /* tslint:enable */
-        this.slides = [
+  constructor(public navCtrl: NavController, public menu: MenuController) {
+      this.slides = [
           {
-            title: values.TUTORIAL_SLIDE1_TITLE,
-            description: values.TUTORIAL_SLIDE1_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-1.png',
+              title: "欢迎使用家装通",
+              description: "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+              image: 'assets/img/ica-slidebox-img-1.png',
           },
           {
-            title: values.TUTORIAL_SLIDE2_TITLE,
-            description: values.TUTORIAL_SLIDE2_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-2.png',
+              title: "第二张",
+              description: "描述",
+              image: 'assets/img/ica-slidebox-img-2.png',
           },
           {
-            title: values.TUTORIAL_SLIDE3_TITLE,
-            description: values.TUTORIAL_SLIDE3_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-3.png',
+              title: "第三张",
+              description: "描述",
+              image: 'assets/img/ica-slidebox-img-3.png',
           }
-        ];
-      });
+      ];
   }
 
   startApp() {
