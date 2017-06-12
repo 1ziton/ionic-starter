@@ -41,7 +41,7 @@ import {TranslateService} from '@ngx-translate/core'
   </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
-export class MyAppComponent {
+export class MyApp {
   rootPage = FirstRunPage;
   a = "";
   @ViewChild(Nav) nav: Nav;

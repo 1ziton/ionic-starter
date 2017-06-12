@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 
 
-export interface Slide {
+export interface ISlide {
   title: string;
   description: string;
   image: string;
@@ -18,7 +18,7 @@ export interface Slide {
   templateUrl: 'tutorial.html'
 })
 export class TutorialPage {
-  slides: Slide[];
+  slides: ISlide[];
   showSkip = true;
 
   constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService) {

@@ -1,6 +1,7 @@
 {
   "rulesDirectory": [
-    "node_modules/codelyzer"
+    "node_modules/codelyzer",
+    "node_modules/vrsource-tslint-rules/rules"
   ],
   "rules": {
     "align": [true, "statements"],
@@ -8,11 +9,9 @@
     "class-name": true,
     "comment-format": [true, "check-space"],
     "curly": false,
-    "eofline": true,
     "forin": true,
     "indent": [true, "spaces"],
     "interface-name": false,
-//    "jsdoc-format": true,
     "label-position": true,
     "max-line-length": [true, 140],
     "member-access": false,
@@ -21,8 +20,7 @@
     "no-arg": true,
     "no-bitwise": true,
     "no-conditional-assignment": true,
-//    "no-consecutive-blank-lines": true,
-    "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
+    "no-console": [true, "debug", "info","warn","error","log", "time", "timeEnd", "trace"],
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
@@ -44,16 +42,15 @@
     "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-finally", "check-whitespace"],
     "radix": true,
     "switch-default": true,
-//    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
     "triple-equals": [true, "allow-null-check"],
     "typedef": false,
     "typedef-whitespace": [true,
       {"call-signature": "nospace", "index-signature": "nospace", "parameter": "nospace", "property-declaration": "nospace", "variable-declaration": "nospace"},
       {"call-signature": "space", "index-signature": "space", "parameter": "space", "property-declaration": "space", "variable-declaration": "space"}],
-    "variable-name": [true, "check-format", "allow-leading-underscore", "ban-keywords"],
+    "variable-name": [true,  "allow-leading-underscore", "ban-keywords"],
     "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
 
-    "directive-selector": [true, "attribute", "ib", "camelCase"],
+    "directive-selector": [true, "attribute", "", "camelCase"],
     "component-selector": [true, "element", "page", "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
